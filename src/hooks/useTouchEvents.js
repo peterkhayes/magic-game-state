@@ -14,7 +14,7 @@ type OutputHandlers = {
 
 type Output = [boolean, OutputHandlers];
 
-const LONG_PRESS_TIMEOUT = 800;
+const LONG_PRESS_TIMEOUT = 600;
 
 export default function useTouchEvents(
   { onTap, onLongPress }: Input,
