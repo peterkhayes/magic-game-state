@@ -1,0 +1,24 @@
+[declarations]
+# These files are parsed by flow in order to analyze the types of their
+# exports, but are not typedchecked. We include all of node_modules here.
+# See https://flow.org/en/docs/config/declarations/
+<PROJECT_ROOT>/node_modules/.*
+
+[ignore]
+<PROJECT_ROOT>/node_modules/.*test.*
+<PROJECT_ROOT>/node_modules/.*bower\.json.*
+
+[include]
+<PROJECT_ROOT>/src/.*
+
+[libs]
+flow-typed
+
+[lints]
+sketchy-null-number=error
+sketchy-number=error
+unnecessary-invariant=error
+
+[options]
+
+[strict]

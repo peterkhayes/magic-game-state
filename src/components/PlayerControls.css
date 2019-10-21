@@ -1,0 +1,29 @@
+.root {
+    position: relative;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.flip {
+    transform: rotateZ(180deg);
+}
+
+.lifeContainer {
+    flex: 1 1 0;
+}
+
+.life {
+    font-size: 100px;
+}
+
+.manaContainer {
+    height: 100px;
+    display: flex;
+}
+
+.mana {
+    flex: 1 1 0;
+}
