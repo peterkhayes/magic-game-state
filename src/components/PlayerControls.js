@@ -23,10 +23,7 @@ export default function PlayerControls({ flip }: Props) {
         <Counter
           orientation="horizontal"
           {...lifeActions}
-          increment={() => {
-            console.log('increment life');
-            lifeActions.increment();
-          }}
+          increment={lifeActions.increment}
         >
           <div className={styles.life}>{life}</div>
         </Counter>

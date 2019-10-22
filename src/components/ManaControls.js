@@ -3,6 +3,14 @@ import Counter from './Counter';
 import React from 'react';
 import styles from './ManaControls.css';
 import useMana from '../hooks/useMana';
+import times from 'lodash/times';
+
+import colorlessMana from '../images/colorless.svg';
+import whiteMana from '../images/white.svg';
+import blueMana from '../images/blue.svg';
+import blackMana from '../images/black.svg';
+import redMana from '../images/red.svg';
+import greenMana from '../images/green.svg';
 
 const MANA_BACKGROUND_COLORS = {
   colorless: 'rgb(155,122,103)',
@@ -11,6 +19,15 @@ const MANA_BACKGROUND_COLORS = {
   black: 'rgb(166,159,157)',
   red: 'rgb(235,159,130)',
   green: 'rgb(166,211,182)',
+};
+
+const MANA_ICONS = {
+  colorless: colorlessMana,
+  white: whiteMana,
+  blue: blueMana,
+  black: blackMana,
+  red: redMana,
+  green: greenMana,
 };
 
 export default function ManaControls() {
@@ -32,7 +49,15 @@ export default function ManaControls() {
             decrement={() => decrement(color)}
             reset={reset}
           >
-            {mana[color]}
+            <div className={styles.manaSymbols}>
+              {mana[color] === 0 ? (
+                <img src={MANA_ICONS[color]} className={styles.manaPlaceholder} />
+              ) : (
+                times(mana[color], (i) => (
+                  <img key={i} src={MANA_ICONS[color]} className={styles.manaSymbol} />
+                ))
+              )}
+            </div>
           </Counter>
         </div>
       ))}

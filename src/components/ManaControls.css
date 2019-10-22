@@ -1,5 +1,5 @@
 .manaControls {
-    height: 100px;
+    height: 110px;
     display: flex;
     color: #333;
 }
@@ -7,4 +7,23 @@
 .manaControl {
     flex: 1 1 0;
     position: relative;
+}
+
+.manaSymbols {
+    max-width: 51px;
+}
+
+.manaSymbol {
+    margin: 1px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.manaPlaceholder {
+    opacity: 0.1;
+    filter: grayscale(1);
+    width: 40px;
+    height: 40px;
 }
