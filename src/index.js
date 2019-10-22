@@ -12,6 +12,15 @@ window.oncontextmenu = function(event) {
   return false;
 };
 
+// Internet says this prevents tap to zoom
+document.addEventListener(
+  'touchmove',
+  (e) => {
+    e.preventDefault();
+  },
+  { passive: false },
+);
+
 // Faster click events
 initReactFastclick();
 

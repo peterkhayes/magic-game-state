@@ -4,6 +4,7 @@ body {
   height: 100vh;
   color: white;
   background-color: #333;
+  touch-action: manipulation;
 }
 
 h1, h2, h3, h4, h5, h6 {
