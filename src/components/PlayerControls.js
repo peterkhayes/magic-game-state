@@ -14,7 +14,7 @@ type Props = {|
 |};
 
 export default function PlayerControls({ flip }: Props) {
-  const [life, lifeActions] = useCounter(INITIAL_LIFE);
+  const [life, lifeActions] = useCounter(INITIAL_LIFE, -Infinity);
   const [poison, poisonActions] = useCounter(INITIAL_POISON);
 
   return (

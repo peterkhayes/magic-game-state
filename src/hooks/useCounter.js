@@ -17,13 +17,16 @@ export type CounterActions = {|
   reset: () => void,
 |};
 
-export default function useCounter(initialValue: number): [number, CounterActions] {
+export default function useCounter(
+  initialValue: number,
+  minValue?: number = 0,
+): [number, CounterActions] {
   const [currentValue, dispatch] = useReducer((value: number, action: CounterAction) => {
     switch (action) {
       case 'increment':
         return value + 1;
       case 'decrement':
-        return Math.max(value - 1, 0);
+        return Math.max(value - 1, minValue);
       case 'reset':
         return initialValue;
       default:
