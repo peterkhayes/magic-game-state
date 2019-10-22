@@ -1,4 +1,4 @@
-.root {
+.playerControls {
     position: relative;
     flex: 1 1 0;
     display: flex;
@@ -13,17 +13,19 @@
 
 .lifeContainer {
     flex: 1 1 0;
+    position: relative;
 }
 
 .life {
     font-size: 100px;
 }
 
-.manaContainer {
-    height: 100px;
-    display: flex;
+.poisonContainer {
+    height: 60px;
+    position: relative;
 }
 
-.mana {
-    flex: 1 1 0;
+.poison {
+    color: rgb(128,220,128);
+    font-size: 22px;
 }

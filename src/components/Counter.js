@@ -1,51 +1,31 @@
 // @flow
 import React from 'react';
-import classNames from 'classnames';
-import TouchTarget from './TouchTarget';
-import styles from './Counter.css';
+import TouchDisplay from './TouchDisplay';
+import type { CounterActions } from '../hooks/useCounter';
+
+type TouchDisplayConfig = React$ElementConfig<typeof TouchDisplay>;
 
 type Props = {|
-  orientation: 'horizontal' | 'vertical',
-  children?: React$Node,
-  darkTheme?: boolean,
-  increment: () => void,
-  decrement: () => void,
-  reset: () => void,
+  ...$Rest<TouchDisplayConfig, { targets: * }>,
+  ...CounterActions,
 |};
 
 export default function Counter({
-  orientation,
-  children,
-  darkTheme,
   increment,
   decrement,
   reset,
+  ...touchDisplayProps
 }: Props) {
-  return (
-    <div className={styles.counter}>
-      <div
-        className={classNames({
-          [styles.targetContainer]: true,
-          [styles[orientation]]: true,
-        })}
-      >
-        <TouchTarget
-          className={styles.target}
-          darkTheme={darkTheme}
-          onTap={decrement}
-          onLongPress={reset}
-        />
-        <TouchTarget
-          className={styles.target}
-          darkTheme={darkTheme}
-          onTap={increment}
-          onLongPress={reset}
-        />
-      </div>
-      {children}
-    </div>
-  );
+  const targets = [
+    {
+      onTap: decrement,
+      onLongPress: reset,
+    },
+    {
+      onTap: increment,
+      onLongPress: reset,
+    },
+  ];
+
+  return <TouchDisplay {...touchDisplayProps} targets={targets} />;
 }
-Counter.defaultProps = {
-  orientation: 'vertical',
-};

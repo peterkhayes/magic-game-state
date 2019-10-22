@@ -1,18 +1,32 @@
 // @flow
 import React from 'react';
-// import type { GameState, GameStateActions } from '../hooks/useGameState';
 import styles from './GameControls.css';
-
-// type Props = {|
-//   ...GameState,
-//   ...GameStateActions,
-// |};
-
-// storm,
-// incrementStorm,
-// decrementStorm,
-// resetStorm,
+import Counter from './Counter';
+import TouchDisplay from './TouchDisplay';
+import useCounter from '../hooks/useCounter';
+import useCoinFlip from '../hooks/useCoinFlip';
 
 export default function GameControls() {
-  return <div className={styles.root}>Game Controls</div>;
+  const [storm, stormActions] = useCounter(0);
+  const [flip, flipActions] = useCoinFlip();
+
+  return (
+    <div className={styles.gameControls}>
+      <div className={styles.stormCounter}>
+        <Counter orientation="horizontal" {...stormActions}>
+          Storm: {storm}
+        </Counter>
+      </div>
+      <div className={styles.coinFlip}>
+        <TouchDisplay targets={[{ onTap: flipActions.flip }]}>Flip Coin</TouchDisplay>
+      </div>
+      {flip != null && (
+        <div className={styles.coinFlipResultOverlay} onPointerUp={flipActions.reset}>
+          <div className={styles.coinFlipResultModal}>
+            <div>{flip ? '⇧' : '⇩'}</div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }

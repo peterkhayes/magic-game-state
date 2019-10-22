@@ -1,0 +1,10 @@
+.manaControls {
+    height: 100px;
+    display: flex;
+    color: #333;
+}
+
+.manaControl {
+    flex: 1 1 0;
+    position: relative;
+}
