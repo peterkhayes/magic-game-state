@@ -21,7 +21,14 @@ export default function GameControls() {
         <TouchDisplay targets={[{ onTap: flipActions.flip }]}>Flip Coin</TouchDisplay>
       </div>
       {flip != null && (
-        <div className={styles.coinFlipResultOverlay} onPointerUp={flipActions.reset}>
+        <div
+          className={styles.coinFlipResultOverlay}
+          onPointerDown={(e) => e.stopPropagation()}
+          onPointerUp={(e) => {
+            e.stopPropagation();
+            flipActions.reset();
+          }}
+        >
           <div className={styles.coinFlipResultModal}>
             <div>{flip ? '⇧' : '⇩'}</div>
           </div>
