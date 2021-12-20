@@ -1,7 +1,11 @@
 {
-  "name": "magic-game-state-2",
-  "version": "0.1.0",
-  "private": true,
+  "name": "magic-game-state",
+  "version": "2.0.0",
+  "description": "Game state tracker for Magic",
+  "homepage": "http://peterkhayes.github.io/magic-game-state",
+  "repository": "https://github.com/peterkhayes/magic-game-state",
+  "author": "Peter Hayes",
+  "license": "ISC",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
@@ -13,6 +17,7 @@
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
     "classnames": "^2.3.1",
+    "gh-pages": "^3.2.3",
     "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -24,7 +29,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
