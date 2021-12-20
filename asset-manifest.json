@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/magic-game-state/static/css/main.45af7f98.css",
+    "main.js": "/magic-game-state/static/js/main.fbd7e6ff.js",
+    "static/js/787.82caf57e.chunk.js": "/magic-game-state/static/js/787.82caf57e.chunk.js",
+    "static/media/white.svg": "/magic-game-state/static/media/white.99c7fe1b9600148fbeed55dc7729eb2e.svg",
+    "static/media/red.svg": "/magic-game-state/static/media/red.b8e69eab9136b4e4a401c7295bdc8f4f.svg",
+    "static/media/green.svg": "/magic-game-state/static/media/green.1e9be629cc98068fb2681d6bcfa716b7.svg",
+    "static/media/black.svg": "/magic-game-state/static/media/black.7f78a23faaceb72cf1d01f86dedabf9e.svg",
+    "index.html": "/magic-game-state/index.html",
+    "static/media/blue.svg": "/magic-game-state/static/media/blue.8fcc549bb705b8de6da416da518b604f.svg",
+    "static/media/colorless.svg": "/magic-game-state/static/media/colorless.4af949b50d04a437b836705f24f1039f.svg",
+    "main.45af7f98.css.map": "/magic-game-state/static/css/main.45af7f98.css.map",
+    "main.fbd7e6ff.js.map": "/magic-game-state/static/js/main.fbd7e6ff.js.map",
+    "787.82caf57e.chunk.js.map": "/magic-game-state/static/js/787.82caf57e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45af7f98.css",
+    "static/js/main.fbd7e6ff.js"
+  ]
+}
