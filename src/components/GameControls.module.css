@@ -1,0 +1,47 @@
+.gameControls {
+  display: flex;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.stormCounter {
+  flex: 1;
+  height: 50px;
+  border-left: 1px solid white;
+}
+
+.coinFlip {
+  flex: 1;
+  height: 50px;
+}
+
+.coinFlipResultOverlay {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coinFlipResultModal {
+  background-color: white;
+  color: #333;
+  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  border-radius: 10px;
+  font-size: 200px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,31 @@
+.playerControls {
+  position: relative;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.flip {
+  transform: rotateZ(180deg);
+}
+
+.lifeContainer {
+  flex: 1 1 0;
+  position: relative;
+}
+
+.life {
+  font-size: 100px;
+}
+
+.poisonContainer {
+  height: 60px;
+  position: relative;
+}
+
+.poison {
+  color: rgb(128, 220, 128);
+  font-size: 22px;
+}
