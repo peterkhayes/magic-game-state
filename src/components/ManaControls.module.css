@@ -11,6 +11,7 @@
 
 .manaSymbols {
   max-width: 51px;
+  pointer-events: none;
 }
 
 .manaSymbol {
