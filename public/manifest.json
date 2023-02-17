@@ -1,15 +1,25 @@
 {
-  "short_name": "MTG State",
-  "name": "Magic Game State Tracker",
+  "background_color": "#333",
+  "description": "Tracks game state for MTG. Optimized for vintage + vintage cube.",
+  "display": "fullscreen",
   "icons": [
+    {
+      "src": "icon.jpg",
+      "sizes": "any",
+      "type": "image/jpg"
+    },
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }
   ],
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "name": "MTG Game State Tracker",
+  "orientation": "portrait",
+  "short_name": "MTG",
   "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#333"
 }
